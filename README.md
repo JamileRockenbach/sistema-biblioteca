@@ -1,7 +1,5 @@
 # Sistema de Biblioteca em Java (POO) 📚
 
----
-
  - Este projeto é um **sistema de gerenciamento de biblioteca** desenvolvido em **Java**, utilizando os conceitos de **Programação Orientada a Objetos (POO)**.  
  - Ele permite cadastrar, listar, pesquisar, atualizar e remover livros do acervo, além de gerar estatísticas como quantidade de livros e identificação do mais antigo/novo.
  - Este trabalho foi desenvolvido na matéria Organização e Abstração na Programação do curso Ciência da Computação coordenado pelo professor Luciano Rodrigo Ferretto.
