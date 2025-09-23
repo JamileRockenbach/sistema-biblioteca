@@ -24,18 +24,6 @@ public class Input {
         }
     }
 
-    public static int scanIntRange(String prompt, Scanner scan, int min, int max) {
-        int valor;
-        while (true) {
-            valor = scanInt(prompt, scan);
-            if (valor < min || valor > max) {
-                System.out.println("Valor deve estar entre " + min + " e " + max + ".");
-            } else {
-                return valor;
-            }
-        }
-    }
-
     public static double scanDouble(String prompt, Scanner scan) {
         while (true) {
             System.out.print(prompt);

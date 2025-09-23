@@ -1,4 +1,4 @@
-public class LivroFisico extends Livro {
+public final class LivroFisico extends Livro {
     private int numeroExemplares;
     private String dimensoes;
 
@@ -41,5 +41,10 @@ public class LivroFisico extends Livro {
         return dadosLivro
                 + ", Número de Exemplares: " + this.getNumeroExemplares()
                 + ", Dimensão: " + dimensoes;
+    }
+
+    @Override
+    public String getTipoLivro(){
+        return "Livro Físico";
     }
 }

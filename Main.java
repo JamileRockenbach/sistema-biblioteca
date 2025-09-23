@@ -5,7 +5,7 @@ public class Main {
     private static Biblioteca biblioteca = new Biblioteca();
     private static Scanner scan = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { //static: sem instancia
         String menu = """
                 +----------------------------+
                 |   Sistema de Biblioteca!   |
@@ -75,13 +75,13 @@ public class Main {
         String titulo = Input.scanString(">> Digite o Título: ", scan);
         String autor = Input.scanString(">> Digite o Autor: ", scan);
         int anoAtual = java.time.LocalDate.now().getYear();
-        int anoPublicacao = Input.scanIntRange(">> Digite o ano de publicação: ", scan, 1900, anoAtual);
-        int numeroPaginas = Input.scanIntRange(">> Digite o número de páginas: ", scan, 1, 100000);
-        int tipo = Input.scanIntRange("Qual tipo de Livro (1 - Físico, 2 - Digital): ", scan, 1, 2);
+        int anoPublicacao = Input.scanInt(">> Digite o ano de publicação: ", scan);
+        int numeroPaginas = Input.scanInt(">> Digite o número de páginas: ", scan);
+        int tipo = Input.scanInt("Qual tipo de Livro (1 - Físico, 2 - Digital): ", scan);
 
         Livro livro;
         if (tipo == 1) {
-            int numeroExemplares = Input.scanIntRange(">> Informe o número de exemplares: ", scan, 1, 9999);
+            int numeroExemplares = Input.scanInt(">> Informe o número de exemplares: ", scan);
             String dimensoes = Input.scanString(">> Informe as dimensões: ", scan);
             livro = new LivroFisico(titulo, autor, anoPublicacao, numeroPaginas, numeroExemplares, dimensoes);
         } else {
