@@ -5,7 +5,7 @@ public class Main {
     private static Biblioteca biblioteca = new Biblioteca();
     private static Scanner scan = new Scanner(System.in);
 
-    public static void main(String[] args) { //static: sem instancia
+    public static void main(String[] args) { 
         String menu = """
                 +----------------------------+
                 |   Sistema de Biblioteca!   |
@@ -154,7 +154,7 @@ public class Main {
             String dimensoes = Input.scanString(">> Informe as dimensões (cm): ", scan);
             novoLivro = new LivroFisico(titulo, autor, anoPublicacao, numeroPaginas, numeroExemplares, dimensoes);
         } else {
-            double tamanhoArquivo = Input.scanDouble(">> Informe o tamanho do arquivo (MB): ", scan);
+            double tamanhoArquivo = Input.scanPositiveDouble(">> Informe o tamanho do arquivo (MB): ", scan);
             String formato = Input.scanString(">> Informe o formato (PDF, EPUB, etc.): ", scan);
             novoLivro = new LivroDigital(titulo, autor, anoPublicacao, numeroPaginas, formato, tamanhoArquivo);
         }
